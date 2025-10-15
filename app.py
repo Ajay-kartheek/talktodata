@@ -371,14 +371,14 @@ def main():
                             else:
                                 st.info("Query executed successfully but returned no results")
 
-                            # Explanation
-                            with st.expander("💡 Explain Query"):
-                                if st.button("Generate Explanation"):
-                                    with st.spinner("Generating explanation..."):
-                                        explanation = st.session_state.app.explain_sql(
-                                            results['sql']
-                                        )
-                                        st.write(explanation)
+                            # # Explanation
+                            # with st.expander("💡 Explain Query"):
+                            #     if st.button("Generate Explanation"):
+                            #         with st.spinner("Generating explanation..."):
+                            #             explanation = st.session_state.app.explain_sql(
+                            #                 results['sql']
+                            #             )
+                            #             st.write(explanation)
 
                         else:
                             st.error(f"❌ Query failed: {results['error']}")
